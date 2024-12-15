@@ -1,0 +1,25 @@
+Reconciliation: The process of comparing the Virtual DOM tree with the actual DOM tree and updating the DOM efficiently.
+
+Fiber: The internal implementation that makes reconciliation and rendering more efficient,
+       flexible, and responsive. It allows React to handle updates incrementally, prioritize work, and improve performance.
+       Fiber allows React to render on platforms other than the DOM (e.g., React Native).
+
+
+Key Features of Fiber
+
+Incremental Rendering:
+Fiber enables React to pause and resume rendering tasks. This allows React to split rendering work into smaller chunks,
+ prioritizing more urgent updates and deferring less critical ones.
+This is especially useful for maintaining a responsive UI while handling heavy computations.
+
+Priority-Based Updates:
+Each update in React is assigned a priority. For example, user input like a button click might have higher priority than
+ a network request.Fiber helps React process these updates based on priority, ensuring a smoother user experience.
+
+Concurrency:
+Fiber introduces concurrent rendering, where React can work on multiple tasks simultaneously, pausing low-priority tasks
+ to focus on higher-priority tasks.This makes React capable of handling animations, user interactions, and data updates more seamlessly.
+
+Improved Reconciliation:
+Fiber enhances the reconciliation process by breaking the Virtual DOM tree into smaller units of work (called fibers).
+It performs diffing more efficiently by processing these fibers incrementally.
